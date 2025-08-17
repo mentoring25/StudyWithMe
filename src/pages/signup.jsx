@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/auth.css'
 
-function Signup() {
+function Signup({ switchMode }) {
   return (
     <>
       <div id="title">
@@ -21,7 +21,7 @@ function Signup() {
           <button type="submit" id="form-btn" className="large"> 회원가입 </button>
         </form>
         <div id="form-footer">
-          <p> 이미 게정이 있으신가요? <a href=""> 로그인하기 </a> </p>
+          <p> 이미 게정이 있으신가요? <a href="#" onClick={switchMode}> 로그인하기 </a> </p>
         </div>
       </div>
     </>

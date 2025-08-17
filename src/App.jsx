@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import Login from './pages/login.jsx'
-import Signup from './pages/signup.jsx'
+import Auth from './components/auth.jsx'
 import './styles/auth.css'
 
 function App() {
   return (
     <>
+      <Auth />
     </>
   )
 }

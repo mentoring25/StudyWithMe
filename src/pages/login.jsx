@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/auth.css'
 
-function Login() {
+function Login({ switchMode }) {
   return (
     <>
       <div id="title">
@@ -22,7 +22,7 @@ function Login() {
         </form>
         <div id="form-footer">
           <a href=""> 이메일 · 비밀번호 찾기 </a>
-          <p> 계정이 없으신가요? <a href=""> 회원가입하기 </a> </p>
+          <p> 계정이 없으신가요? <a href="#" onClick={switchMode}> 회원가입하기 </a> </p>
         </div>
       </div>
     </>
