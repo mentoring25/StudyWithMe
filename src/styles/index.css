@@ -1,0 +1,65 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #1A202C;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --title-display: 48px;
+  --title-1: 36px;
+  --title-2: 28px;
+  --title-3: 20px;
+  --body-large: 18px;
+  --body-medium: 16px;
+  --body-small: 14px;
+  --body-caption: 12px;
+
+  --primary-color: #4FD1C5;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: #48BEB3;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 { margin: 0; font-size: var(--title-display); }
+h3 { margin: 0;  font-size: var(--title-2); }
+.large { margin: 0; font-size: var(--body-large); }
+p { margin: 0; font-size: var(--body-medium); }
+.caption { margin: 0; font-size: var(--body-caption); }
+
+button {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
