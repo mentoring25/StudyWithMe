@@ -22,10 +22,10 @@
   flex-direction: column;
   gap: 16px;
   position: absolute;
-  top: 72px;
-  border: 1px solid var(--natural-color-100);
-  border-radius: 4px;
-  background-color: white;
+  top: 76px;
+  border-radius: 12px;
+  background-color: var(--bg-subtle);
+  box-shadow: 0 0 12px var(--natural-color-100);
 }
 
 .switcher-category {
@@ -33,6 +33,8 @@
   flex-direction: column;
   gap: 4px;
 }
+
+.caption { color: var(--text-disabled); }
 
 .switcher-channel {
   cursor: pointer;
@@ -58,6 +60,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--text-secondary);
   border-radius: 4px;
   transition: 0.2s;
 }

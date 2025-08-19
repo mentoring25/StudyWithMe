@@ -22,8 +22,12 @@
   --body-small: 14px;
   --body-caption: 12px;
 
+  --bg-default: #FFFFFF;
+  --bg-subtle: #F9F9F9;
+
   --text-primary: #263655;
   --text-secondary: #4A5568;
+  --text-disabled: #A0AEC0;
 
   --primary-color: #4FD1C5;
   --natural-color-50: #EDEEF0;
