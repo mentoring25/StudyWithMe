@@ -1,0 +1,9 @@
+body {
+  display: block;
+  place-items: start;
+}
+
+#root {
+  height: 100vh;
+  display: block;
+}

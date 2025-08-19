@@ -1,0 +1,131 @@
+#sidebar {
+  padding: 20px 0;
+  width: 180px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+#expand-switcher {
+  z-index: 10;
+  box-sizing: border-box;
+  padding: 16px 16px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  top: 72px;
+  border: 1px solid var(--natural-color-100);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.switcher-category {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.switcher-channel {
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.switcher-channel:hover { background-color: var(--natural-color-50); }
+
+.switcher-channel-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: var(--natural-color-100);
+}
+
+.switcher-made {
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.switcher-made:hover { background-color: var(--natural-color-50); }
+
+#main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#switcher {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#switcher:hover { background-color: var(--natural-color-50); }
+/* 호버했을 때 옆에 패딩이조금있으면 조을것같긴한데... */
+
+#switcher-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background-color: var(--natural-color-100);
+}
+
+#switcher-txt {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#switcher-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#select { background-color: var(--natural-color-50); }
+
+.channel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.category:hover { background-color: var(--natural-color-50); }
+
+
+.channel {
+  width: 100%;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+.channel:hover { background-color: var(--natural-color-50); }

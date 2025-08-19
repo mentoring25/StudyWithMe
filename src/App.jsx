@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Auth from './components/auth.jsx'
-import './styles/auth.css'
+import Index from './pages/index.jsx'
 
 function App() {
   return (
     <>
-      <Auth />
+      <Index />
     </>
   )
 }
