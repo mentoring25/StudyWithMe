@@ -28,6 +28,7 @@
   --primary-color: #4FD1C5;
   --natural-color-50: #EDEEF0;
   --natural-color-100: #C7CAD0;
+  --natural-color-200: #ACB1BA;
 }
 
 a {
@@ -47,6 +48,11 @@ hr {
   background-color: var(--natural-color-100);
 }
 
+.height {
+  width: 1px;
+  height: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -57,9 +63,10 @@ body {
 
 h1 { margin: 0; font-size: var(--title-display); }
 h3 { margin: 0;  font-size: var(--title-2); }
-.large { margin: 0; font-size: var(--body-large); }
+.large { font-size: var(--body-large); }
 p { margin: 0; font-size: var(--body-medium); }
-.caption { margin: 0; font-size: var(--body-caption); }
+.small { font-size: var(--body-small); }
+.caption { font-size: var(--body-caption); }
 
 button {
   border-radius: 12px;

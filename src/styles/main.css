@@ -1,9 +1,18 @@
 body {
+  width: 100vw;
   display: block;
   place-items: start;
 }
 
 #root {
+  width: 100vw;
   height: 100vh;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 0;
+}
+
+main {
+  width: 100%;
 }

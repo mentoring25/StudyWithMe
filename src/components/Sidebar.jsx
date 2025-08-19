@@ -62,35 +62,38 @@ function Sidebar() {
   return (
     <>
       {switcher === "expand" && <Expandswitcher />}
-      <div id="sidebar">
-        <div id="main">
-          <div id="switcher" onClick={() => setSwitcher(prev => (prev === 'expand' ? 'close' : 'expand'))}>
-            <div id="switcher-img"></div>
-            <div id="switcher-txt">
-              <h1 id="switcher-title"> 판교마스터 </h1>
-              <DownarrowIcon />
+      <div id="sidebar-container">
+        <div id="sidebar">
+          <div id="main">
+            <div id="switcher" onClick={() => setSwitcher(prev => (prev === 'expand' ? 'close' : 'expand'))}>
+              <div id="switcher-img"></div>
+              <div id="switcher-txt">
+                <h1 id="switcher-title"> 판교마스터 </h1>
+                <DownarrowIcon />
+              </div>
+            </div>
+            <div className="channel-container">
+              <Channel channelName={"대시보드"} Icons={DashboardIcon} />
+              <Channel channelName={"과제 제출"} Icons={BookIcon} />
             </div>
           </div>
+          <hr />
           <div className="channel-container">
-            <Channel channelName={"대시보드"} Icons={DashboardIcon} />
-            <Channel channelName={"과제 제출"} Icons={BookIcon} />
+            <Category categoryName={"채팅"} />
+            <Channel channelName={"공지사항"} Icons={HashIcon}/>
+            <Channel channelName={"로비"} Icons={HashIcon}/>
+            <Channel channelName={"수다"} Icons={HashIcon}/>
+            <Channel channelName={"질문"} Icons={HashIcon}/>
+            <Channel channelName={"자료공유"} Icons={HashIcon}/>
+          </div>
+          <hr />
+          <div className="channel-container">
+            <Category categoryName={"음성 채팅"} />
+            <Channel channelName={"라운지"} Icons={VoiceIcon}/>
+            <Channel channelName={"공부방"} Icons={VoiceIcon}/>
           </div>
         </div>
-        <hr />
-        <div className="channel-container">
-          <Category categoryName={"채팅"} />
-          <Channel channelName={"공지사항"} Icons={HashIcon}/>
-          <Channel channelName={"로비"} Icons={HashIcon}/>
-          <Channel channelName={"수다"} Icons={HashIcon}/>
-          <Channel channelName={"질문"} Icons={HashIcon}/>
-          <Channel channelName={"자료공유"} Icons={HashIcon}/>
-        </div>
-        <hr />
-        <div className="channel-container">
-          <Category categoryName={"음성 채팅"} />
-          <Channel channelName={"라운지"} Icons={VoiceIcon}/>
-          <Channel channelName={"공부방"} Icons={VoiceIcon}/>
-        </div>
+        <hr className="height" />
       </div>
     </>
   )

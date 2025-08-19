@@ -1,6 +1,11 @@
+#sidebar-container {
+  height: 100vh;
+  display: flex;
+}
+
 #sidebar {
-  padding: 20px 0;
-  width: 180px;
+  padding: 24px 0;
+  width: 200px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -12,7 +17,7 @@
   z-index: 10;
   box-sizing: border-box;
   padding: 16px 16px;
-  width: 180px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   gap: 16px;
