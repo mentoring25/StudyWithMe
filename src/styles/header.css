@@ -8,10 +8,76 @@
   justify-content: space-between;
 }
 
+#expand-info {
+  box-sizing: border-box;
+  padding: 0 12px;
+  padding-top: 24px;
+  padding-bottom: 12px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  top: 52px;
+  right: 0;
+  border-radius: 12px;
+  background-color: var(--bg-subtle);
+  box-shadow: 0 0 12px var(--natural-color-100);
+}
+
+#expand-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#expand-user-profile {
+  width: 52px;
+  height: 52px;
+  border-radius: 9999px;
+  background-color: var(--natural-color-100);
+}
+
+#expand-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+#expand-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expand-panel-menu {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.expand-panel-menu:hover { background-color: var(--natural-color-50); }
+
+.expand-panel-txt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#header p { cursor: default; }
+
 nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 #icons {
@@ -20,12 +86,19 @@ nav {
   gap: 12px;
   color: var(--natural-color-200);
 }
+#icons svg { transition: 0.2s; }
+#icons svg:hover { color: var(--text-secondary); }
 
 #user {
+  padding: 8px 12px;
   display: flex;
   align-items: center;
   gap: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
 }
+#user:hover { background-color: var(--natural-color-50); } /* 외안되지 */
 
 #user-img {
   width: 20px;
