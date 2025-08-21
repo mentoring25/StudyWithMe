@@ -16,7 +16,7 @@
   --title-display: 48px;
   --title-1: 36px;
   --title-2: 28px;
-  --title-3: 20px;
+  --title-3: 24px;
   --body-large: 18px;
   --body-medium: 16px;
   --body-small: 14px;
@@ -67,6 +67,7 @@ body {
 
 h1 { margin: 0; font-size: var(--title-display); }
 h3 { margin: 0;  font-size: var(--title-2); }
+h4 { margin: 0; font-size: var(--title-3); font-weight: 500;}
 .large { font-size: var(--body-large); }
 p { margin: 0; font-size: var(--body-medium); }
 .small { font-size: var(--body-small); }
