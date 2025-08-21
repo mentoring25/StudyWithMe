@@ -7,7 +7,7 @@ function Category({ categoryName }) {
     <>
       <div className="category">
         <p> {categoryName} </p>
-        <AddIcon />
+        <AddIcon size={16} />
       </div>
     </>
   )
@@ -17,7 +17,7 @@ function Channel({ channelName, Icons }) {
   return (
     <>
       <div className="channel">
-        {Icons && <Icons />}
+        {Icons && <Icons size={16} />}
         <p> {channelName} </p>
       </div>
     </>
@@ -47,7 +47,7 @@ function Expandswitcher() {
         <div className="switcher-category">
           <p className="caption"> 새로 시작하기 </p>
           <div className="switcher-made">
-            <AddIcon />
+            <AddIcon size={16} />
             <p> 스터디 만들기 </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ function Sidebar() {
               <div id="switcher-img"></div>
               <div id="switcher-txt">
                 <h1 id="switcher-title"> 판교마스터 </h1>
-                <DownarrowIcon />
+                <DownarrowIcon size={16} />
               </div>
             </div>
             <div className="channel-container">

@@ -16,14 +16,14 @@ function ExpandInfo({ userName, userEmail }) {
         <div id="expand-panel">
           <div className="expand-panel-menu">
             <div className="expand-panel-txt">
-              <ThemeIcon />
+              <ThemeIcon size={16} />
               <p className="small"> 테마 </p>
             </div>
-            <RightarrowIcon />
+            <RightarrowIcon size={16} />
           </div>
           <div className="expand-panel-menu">
             <div className="expand-panel-txt">
-              <LogoutIcon />
+              <LogoutIcon size={16} />
               <p className="small"> 로그아웃 </p>
             </div>
           </div>
@@ -44,14 +44,14 @@ function Header({ channelName, userName }) {
         <p> {channelName} </p>
         <nav>
           <div id="icons">
-            <SettingIcon />
-            <NotificationIcon />
+            <SettingIcon size={20} />
+            <NotificationIcon size={20} />
           </div>
           <div id="user" onClick={() => setInfo(prev => (prev === 'expand' ? 'close' : 'expand'))}>
             <div id="user-img"></div>
             <div id="user-name">
               <p className="small"> {userName} </p>
-              <DownarrowIcon /> {/* 이거 피그마에서는 downarrow크기가 12인디 아이콘크기를 여러개로만들어두던지 방법을찾든지 해야될듯 */}
+              <DownarrowIcon size={12} />
             </div>
           </div>
         </nav>

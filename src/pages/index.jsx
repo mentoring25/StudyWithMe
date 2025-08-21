@@ -9,7 +9,7 @@ function Title({ title }) {
     <>
       <div className="title">
         <p> {title} </p>
-        <RightarrowIcon />
+        <RightarrowIcon size={16} />
       </div>
     </>
   )
