@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { RightarrowIcon } from '../assets/icons'
+import { LeftarrowIcon, RightarrowIcon } from '../assets/icons'
 import Sidebar from '../components/Sidebar.jsx'
 import Header from '../components/header.jsx'
 import '../styles/main.css'
@@ -80,6 +80,31 @@ function Calender() {
     <>
       <div id="calender">
         <Title title={"일정"} />
+        <div id="calender-date-container">
+          <div id="calender-title">
+            <p> 2025년 8월 16일(토) </p>
+            <div id="calender-title-icons">
+              <LeftarrowIcon size={16} />
+              <RightarrowIcon size={16} />
+            </div>
+          </div>
+          <CalenderDate />
+        </div>
+      </div>
+    </>
+  )
+}
+
+function CalenderDate() {
+  const date = ['일', '월', '화', '수', '목', '금', '토', '일']
+
+  return (
+    <>
+      <div>
+        <div id="calender-day">
+          
+        </div>
+        <div id="calender-date"></div>
       </div>
     </>
   )
