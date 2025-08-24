@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { LeftarrowIcon, RightarrowIcon } from '../assets/icons'
+import { LeftarrowIcon, RightarrowIcon, NoneCheckBox, CheckBox } from '../assets/icons'
 import Sidebar from '../components/Sidebar.jsx'
 import Header from '../components/header.jsx'
 import '../styles/main.css'
@@ -32,7 +32,7 @@ function Goal({ goal, percent }) {
   )
 }
 
-function Assignment() {
+function Assignment({ notSubmitted, submit, all }) {
   function AssignmentMore({ category, title, date }) {
     return (
       <>
@@ -53,15 +53,15 @@ function Assignment() {
           <div id="status">
             <div className="status">
               <p className="small"> 미제출 </p>
-              <h4 > 2개 </h4>
+              <h4> {notSubmitted}개 </h4>
             </div>
             <div className="status">
               <p className="small"> 제출 </p>
-              <h4 > 4개 </h4>
+              <h4> {submit}개 </h4>
             </div>
             <div className="status">
               <p className="small"> 전체 </p>
-              <h4 > 300개 </h4>
+              <h4> {all}개 </h4>
             </div>
           </div>
           <div id="assignment-more">
@@ -124,10 +124,51 @@ function CalenderDate() {
   )
 }
 
+function CheckList({ list }) {
+  // useState 써서 list없을떄 없다고 뜨는거 하삼
+  function List({ txt }) {
+    return (
+      <>
+        <div className="list">
+          <NoneCheckBox size={16} />
+          <p className="small"> {txt} </p>
+        </div>
+      </>
+    )
+  }
+
+  const renderList = list.map((item, index) => (
+    <List key={index} txt={item} />
+  ));
+
+  return (
+    <>
+      <div id="checklist">
+        <Title title={"체크리스트"} />
+        <div id="checklist-container">
+          <div id="select-container">
+            <p id="select" className="caption select"> 일일 </p>
+            <p className="caption select"> 과제 </p>
+            <p className="caption select"> 목표 </p>
+          </div>
+          <div id="list-container">
+            {renderList}
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
 function Index() {
   const goal = "프론트 마스터되기";
   const percent = 30;
   const assignmentCount = [2, 4, 300];
+  const list = [
+    "React 배운거 정리하기",
+    "웹사이트 랜딩페이지 만들기",
+    "멘토링"
+  ];
 
   return (
     <>
@@ -137,10 +178,11 @@ function Index() {
         <div id="field">
           <div id="field1">
             <Goal goal={goal} percent={percent}/>
-            <Assignment />
+            <Assignment notSubmitted={2} submit={4} all={300} />
           </div>
           <div id="field2">
             <Calender />
+            <CheckList list={list} />
           </div>
         </div>
       </main>
