@@ -82,10 +82,10 @@ function Calender() {
         <Title title={"일정"} />
         <div id="calender-date-container">
           <div id="calender-title">
-            <p> 2025년 8월 16일(토) </p>
+            <p className="large"> 2025년 8월 16일(토) </p>
             <div id="calender-title-icons">
-              <LeftarrowIcon size={16} />
-              <RightarrowIcon size={16} />
+              <LeftarrowIcon size={20} />
+              <RightarrowIcon size={20} />
             </div>
           </div>
           <CalenderDate />
@@ -96,15 +96,29 @@ function Calender() {
 }
 
 function CalenderDate() {
-  const date = ['일', '월', '화', '수', '목', '금', '토', '일']
+  const day = ['일', '월', '화', '수', '목', '금', '토'];
+  const beforeDate = [27, 28, 29, 30, 31];
+  const date = [
+    1, 2,
+    3, 4, 5, 6, 7, 8, 9,
+    10, 11, 12, 13, 14, 15, 16,
+    17, 18, 19, 20, 21, 22, 23,
+    24, 25, 26, 27, 28, 29, 30,
+    31
+  ];
+  const afterDate = [1, 2, 3, 4, 5, 6];
+  const dayList = day.map((day) => (<p className="small calender-day"> {day} </p>));
+  const beforeDateList = beforeDate.map((date) => (<p className="small calender-before"> {date} </p>));
+  const dateList = date.map((date) => (<p className="small"> {date} </p>));
+  const afterDateList = afterDate.map((date) => (<p className="small calender-after"> {date} </p>));
 
   return (
     <>
-      <div>
-        <div id="calender-day">
-          
-        </div>
-        <div id="calender-date"></div>
+      <div id="calender-date">
+        {dayList}
+        {beforeDateList}
+        {dateList}
+        {afterDateList}
       </div>
     </>
   )
