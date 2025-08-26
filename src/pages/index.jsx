@@ -72,7 +72,7 @@ function Assignment({ notSubmitted, submit, all }) {
         </div>
       </div>
     </>
-  )
+  ) // Assignmentmore 배열써서 props로받아오기
 }
 
 function Calender() {
@@ -107,10 +107,18 @@ function CalenderDate() {
     31
   ];
   const afterDate = [1, 2, 3, 4, 5, 6];
-  const dayList = day.map((day) => (<p className="small calender-day"> {day} </p>));
-  const beforeDateList = beforeDate.map((date) => (<p className="small calender-before"> {date} </p>));
-  const dateList = date.map((date) => (<p className="small"> {date} </p>));
-  const afterDateList = afterDate.map((date) => (<p className="small calender-after"> {date} </p>));
+  const dayList = day.map((day, index) => (
+    <p key={index} className="small calender-day"> {day} </p>
+  ));
+  const beforeDateList = beforeDate.map((date, index) => (
+    <p key={index} className="small calender-before"> {date} </p>
+  ));
+  const dateList = date.map((date, index) => (
+    <p key={index} className="small"> {date} </p>
+  ));
+  const afterDateList = afterDate.map((date, index) => (
+    <p key={index} className="small calender-after"> {date} </p>
+  ));
 
   return (
     <>

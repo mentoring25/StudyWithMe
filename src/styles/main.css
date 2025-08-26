@@ -37,6 +37,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 #goal {
@@ -99,7 +100,10 @@ main {
   gap: 4px;
   border-radius: 12px;
   background-color: var(--bg-subtle);
+  cursor: pointer;
+  transition: 0.2s;
 }
+.status:hover { background-color: var(--natural-color-50); }
 
 #assignment-more {
   width: 100%;
@@ -114,9 +118,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  border-radius: 12px;
   border: 1px solid var(--natural-color-100);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
 }
+.assignment-more:hover { background-color: var(--bg-subtle); }
 
 #field2 {
   width: 280px;
@@ -130,6 +137,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  cursor: default;
 }
 
 #calender-date-container {
@@ -152,17 +160,34 @@ main {
   display: flex;
   align-items: center;
   color: var(--natural-color-100);
+  cursor: pointer;
+  transition: 0.2s;
 }
+#calender-title-icons svg:hover { color: var(--text-disabled); }
+
 
 #calender-date {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   place-items: center;
-  gap: 16px;
+  gap: 4px;
+}
+
+#calender-date p {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .calender-day { color: var(--text-secondary); }
 .calender-before, .calender-after { color: var(--text-disabled); }
+#calender-date p:hover { background-color: var(--natural-color-50); }
 
 #checklist {
   display: flex;
@@ -188,9 +213,11 @@ main {
   border: 1px solid var(--natural-color-200);
   border-radius: 8px;
   background-color: var(--bg-subtle);
+  cursor: pointer;
+  transition: 0.2s;
 }
 #select { color: var(--primary-color); border-color: var(--primary-color); background-color: var(--primary-color-50); }
-.select:hover {}
+.select:hover { color: var(--primary-color); border-color: var(--primary-color); background-color: var(--primary-color-50); }
 
 #list-container {
   padding: 20px;
@@ -206,4 +233,6 @@ main {
   align-items: center;
   gap: 4px;
   color: var(--text-primary);
+  cursor: pointer;
 }
+.list:hover { color: var(--natural-color-200); }
