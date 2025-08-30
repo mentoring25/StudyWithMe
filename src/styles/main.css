@@ -1,11 +1,11 @@
-body {
+#index {
   width: 100vw;
   display: block;
   place-items: start;
   overflow: hidden;
 }
 
-#root {
+#index-container {
   width: 100vw;
   height: 100vh;
   display: flex;

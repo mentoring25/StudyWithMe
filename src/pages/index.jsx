@@ -132,7 +132,22 @@ function CalenderDate() {
   )
 }
 
-function CheckList({ list }) {
+function CheckList() {
+  const todayList = [
+    "React 배운거 정리하기",
+    "웹사이트 랜딩페이지 만들기",
+    "멘토링"
+  ];
+  const subjectList = [
+    "피그마 완성하기",
+    "웹페이지 다 만들기"
+  ];
+  const allList = [
+    "피그마 마스터하기"
+  ];
+
+  const [type, setType] = useState('today');
+
   // useState 써서 list없을떄 없다고 뜨는거 하삼
   function List({ txt }) {
     return (
@@ -145,7 +160,13 @@ function CheckList({ list }) {
     )
   }
 
-  const renderList = list.map((item, index) => (
+  const todayRenderList = todayList.map((item, index) => (
+    <List key={index} txt={item} />
+  ));
+  const subjectRenderList = subjectList.map((item, index) => (
+    <List key={index} txt={item} />
+  ));
+  const allRenderList = allList.map((item, index) => (
     <List key={index} txt={item} />
   ));
 
@@ -155,12 +176,14 @@ function CheckList({ list }) {
         <Title title={"체크리스트"} />
         <div id="checklist-container">
           <div id="select-container">
-            <p id="select" className="caption select"> 일일 </p>
-            <p className="caption select"> 과제 </p>
-            <p className="caption select"> 목표 </p>
+            <p className="caption select" onClick={() => setType("today")}> 일일 </p>
+            <p className="caption select" onClick={() => setType("subject")} > 과제 </p>
+            <p className="caption select" onClick={() => setType("all")}> 목표 </p>
           </div>
           <div id="list-container">
-            {renderList}
+            {type === 'today' && todayRenderList}
+            {type === 'subject' && subjectRenderList}
+            {type === 'all' && allRenderList}
           </div>
         </div>
       </div>
@@ -172,28 +195,27 @@ function Index() {
   const goal = "프론트 마스터되기";
   const percent = 30;
   const assignmentCount = [2, 4, 300];
-  const list = [
-    "React 배운거 정리하기",
-    "웹사이트 랜딩페이지 만들기",
-    "멘토링"
-  ];
 
   return (
     <>
-      <Sidebar />
-      <main>
-        <Header channelName={"대시보드"} userName={"진수화"} />
-        <div id="field">
-          <div id="field1">
-            <Goal goal={goal} percent={percent}/>
-            <Assignment notSubmitted={2} submit={4} all={300} />
-          </div>
-          <div id="field2">
-            <Calender />
-            <CheckList list={list} />
-          </div>
+      <div id="index">
+        <div id="index-container">
+          <Sidebar />
+          <main>
+            <Header channelName={"대시보드"} userName={"진수화"} />
+            <div id="field">
+              <div id="field1">
+                <Goal goal={goal} percent={percent}/>
+                <Assignment notSubmitted={2} submit={4} all={300} />
+              </div>
+              <div id="field2">
+                <Calender />
+                <CheckList />
+              </div>
+            </div>
+          </main>
         </div>
-      </main>
+      </div>
     </>
   )
 }
